@@ -139,7 +139,7 @@ export default class {
   public getMatchesByPUUID(options: getMatchesByPUUIDFetchOptions): Promise<APIResponse>;
   public getContent(options: getContentFetchOptions): Promise<APIResponse>;
   public getLeaderboard(options: getLeaderboardOptions): Promise<APIResponse>;
-  public getMatches(options: getMatchesFetchOptions): Promise<APIResponse>;
+  public getMatches(options: getMatchesFetchOptions): Promise<MatchesResponse>;
   public getMatch(options: getMatchFetchOptions): Promise<APIResponse>;
   public getMMRHistory(options: getMMRHistoryFetchOptions): Promise<APIResponse>;
   public getLifetimeMMRHistory(options: getLifetimeMMRHistoryFetchOptions): Promise<APIResponse>;
@@ -161,6 +161,13 @@ export interface _fetch {
 export interface APIResponse {
   status: number;
   data: object | null;
+  ratelimits: RateLimit;
+  error: ErrorObject | null;
+}
+
+export interface MatchesResponse {
+  status: number;
+  data: [],
   ratelimits: RateLimit;
   error: ErrorObject | null;
 }
