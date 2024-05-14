@@ -56,7 +56,7 @@ export type Modes =
   | "replication"
   | "custom"
   | "newmap"
-  | "snowball"
+  | "snowballfight"
   | "swiftplay"
   | "escalation"
   | "teamdeathmatch"
