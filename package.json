@@ -1,6 +1,6 @@
 {
   "name": "valo-api",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "An updated javascript wrapper for api.henrikdev.xyz",
   "main": "./src/index.js",
   "scripts": {
