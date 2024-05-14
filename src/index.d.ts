@@ -167,7 +167,7 @@ export interface APIResponse {
 
 export interface MatchesResponse {
   status: number;
-  data: [],
+  data: [] | null,
   ratelimits: RateLimit;
   error: ErrorObject | null;
 }
