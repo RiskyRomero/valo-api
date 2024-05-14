@@ -13,7 +13,16 @@ export type Episodes =
   | "e4a3"
   | "e5a1"
   | "e5a2"
-  | "e5a3";
+  | "e5a3"
+  | "e6a1"
+  | "e6a2"
+  | "e6a3"
+  | "e7a1"
+  | "e7a2"
+  | "e7a3"
+  | "e8a1"
+  | "e8a2"
+  | "e8a3";
 
 export type LeaderboardEpisodes =
   | "e2a1"
@@ -27,7 +36,16 @@ export type LeaderboardEpisodes =
   | "e4a3"
   | "e5a1"
   | "e5a2"
-  | "e5a3";
+  | "e5a3"
+  | "e6a1"
+  | "e6a2"
+  | "e6a3"
+  | "e7a1"
+  | "e7a2"
+  | "e7a3"
+  | "e8a1"
+  | "e8a2"
+  | "e8a3";
 
 export type Modes =
   | "escalation"
@@ -38,7 +56,11 @@ export type Modes =
   | "replication"
   | "custom"
   | "newmap"
-  | "snowball";
+  | "snowball"
+  | "swiftplay"
+  | "escalation"
+  | "teamdeathmatch"
+  | "premier";
 
 export type Maps =
   | "ascent"
