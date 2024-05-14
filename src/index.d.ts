@@ -70,7 +70,13 @@ export type Maps =
   | "breeze"
   | "icebox"
   | "haven"
-  | "pearl";
+  | "pearl"
+  | "lotus"
+  | "district"
+  | "kasbah"
+  | "drift"
+  | "piazza"
+  | "sunset";
 
 export type CCRegions =
   | "en-gb"
