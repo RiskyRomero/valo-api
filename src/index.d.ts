@@ -133,34 +133,20 @@ export default class {
   private _validate(input: any): any;
   private _fetch(options: _fetch): Promise<APIResponse>;
   public getAccount(options: AccountFetchOptions): Promise<APIResponse>;
-  public getAccountByPUUID(
-    options: AccountFetchByPUUIDOptions
-  ): Promise<APIResponse>;
-  public getMMRByPUUID(
-    options: getMMRByPUUIDFetchOptions
-  ): Promise<APIResponse>;
-  public getMMRHistoryByPUUID(
-    options: getMMRHistoryByPUUIDFetchOptions
-  ): Promise<APIResponse>;
-  public getMatchesByPUUID(
-    options: getMatchesByPUUIDFetchOptions
-  ): Promise<APIResponse>;
+  public getAccountByPUUID(options: AccountFetchByPUUIDOptions): Promise<APIResponse>;
+  public getMMRByPUUID(options: getMMRByPUUIDFetchOptions): Promise<APIResponse>;
+  public getMMRHistoryByPUUID(options: getMMRHistoryByPUUIDFetchOptions): Promise<APIResponse>;
+  public getMatchesByPUUID(options: getMatchesByPUUIDFetchOptions): Promise<APIResponse>;
   public getContent(options: getContentFetchOptions): Promise<APIResponse>;
   public getLeaderboard(options: getLeaderboardOptions): Promise<APIResponse>;
   public getMatches(options: getMatchesFetchOptions): Promise<APIResponse>;
   public getMatch(options: getMatchFetchOptions): Promise<APIResponse>;
-  public getMMRHistory(
-    options: getMMRHistoryFetchOptions
-  ): Promise<APIResponse>;
-  public getLifetimeMMRHistory(
-    options: getLifetimeMMRHistoryFetchOptions
-  ): Promise<APIResponse>;
+  public getMMRHistory(options: getMMRHistoryFetchOptions): Promise<APIResponse>;
+  public getLifetimeMMRHistory(options: getLifetimeMMRHistoryFetchOptions): Promise<APIResponse>;
   public getMMR(options: getMMRFetchOptions): Promise<APIResponse>;
   public getRawData(options: getRawFetchOptions): Promise<APIResponse>;
   public getStatus(options: getStatusFetchOptions): Promise<APIResponse>;
-  public getFeaturedItems(
-    options: getFeaturedItemsFetchOptions
-  ): Promise<APIResponse>;
+  public getFeaturedItems(options: getFeaturedItemsFetchOptions): Promise<APIResponse>;
   public getOffers(): Promise<APIResponse>;
   public getVersion(options: getVersionFetchOptions): Promise<APIResponse>;
   public getWebsite(options: getWebsiteFetchOptions): Promise<APIResponse>;
