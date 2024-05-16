@@ -127,35 +127,11 @@ export type LeaderboardVersions = "v1" | "v2";
 
 export type Regions = "eu" | "na" | "kr" | "ap" | "latam" | "br";
 
-export default class {
-  private _parsebody(body: any): any;
-  private _parseresponse(req: any): APIResponse;
-  private _validate(input: any): any;
-  private _fetch(options: _fetch): Promise<APIResponse>;
-  public getAccount(options: AccountFetchOptions): Promise<APIResponse>;
-  public getAccountByPUUID(options: AccountFetchByPUUIDOptions): Promise<APIResponse>;
-  public getMMRByPUUID(options: getMMRByPUUIDFetchOptions): Promise<APIResponse>;
-  public getMMRHistoryByPUUID(options: getMMRHistoryByPUUIDFetchOptions): Promise<APIResponse>;
-  public getMatchesByPUUID(options: getMatchesByPUUIDFetchOptions): Promise<APIResponse>;
-  public getContent(options: getContentFetchOptions): Promise<APIResponse>;
-  public getLeaderboard(options: getLeaderboardOptions): Promise<APIResponse>;
-  public getMatches(options: getMatchesFetchOptions): Promise<MatchesResponse>;
-  public getMatch(options: getMatchFetchOptions): Promise<APIResponse>;
-  public getMMRHistory(options: getMMRHistoryFetchOptions): Promise<APIResponse>;
-  public getLifetimeMMRHistory(options: getLifetimeMMRHistoryFetchOptions): Promise<APIResponse>;
-  public getMMR(options: getMMRFetchOptions): Promise<APIResponse>;
-  public getRawData(options: getRawFetchOptions): Promise<APIResponse>;
-  public getStatus(options: getStatusFetchOptions): Promise<APIResponse>;
-  public getFeaturedItems(options: getFeaturedItemsFetchOptions): Promise<APIResponse>;
-  public getOffers(): Promise<APIResponse>;
-  public getVersion(options: getVersionFetchOptions): Promise<APIResponse>;
-  public getWebsite(options: getWebsiteFetchOptions): Promise<APIResponse>;
-  public getCrosshair(options: getCrosshairFetchOptions): Promise<APIResponse>;
-}
-
 export interface _fetch {
   url: string;
-  type: string;
+  type?: string;
+  body?: any;
+  rtype?: any;
 }
 
 export interface APIResponse {
@@ -163,13 +139,7 @@ export interface APIResponse {
   data: object | null;
   ratelimits: RateLimit;
   error: ErrorObject | null;
-}
-
-export interface MatchesResponse {
-  status: number;
-  data: [] | null,
-  ratelimits: RateLimit;
-  error: ErrorObject | null;
+  url?: string
 }
 
 export interface ErrorObject {
@@ -220,8 +190,8 @@ export interface getContentFetchOptions {
 export interface getLeaderboardOptions {
   version: LeaderboardVersions;
   region: Regions;
-  name?: string;
-  tag?: string;
+  name?: string | undefined;
+  tag?: string | undefined;
   puuid?: string;
   season?: LeaderboardEpisodes;
 }
