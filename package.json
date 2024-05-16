@@ -4,7 +4,8 @@
   "description": "An updated javascript wrapper for api.henrikdev.xyz",
   "main": "./src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsup",
+    "test": "mocha -r ts-node/register tests/**/*.test.ts --timeout 60000 --exit"
   },
   "repository": {
     "type": "git",
