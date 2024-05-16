@@ -6,8 +6,26 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RiskyRomero/valo-api.git"
+  },
+  "keywords": [
+    "Valorant",
+    "Api",
+    "Veli",
+    "Anime",
+    "Wrapper",
+    "Discord",
+    "Bot",
+    "Riot",
+    "Games"
+  ],
   "author": "Ryumin",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RiskyRomero/valo-api/issues"
+  },
   "dependencies": {
     "axios": "^1.6.8"
   }
