@@ -1,5 +1,5 @@
 # VALO-API
-Just another Valorant API wrapper written in TypeScript, based on Henrik-3's [unofficial-valorant-api](https://www.npmjs.com/package/unofficial-valorant-api)!
+Just another Valorant API wrapper written in TypeScript, based on Henrik-3's [unofficial-valorant-api](https://github.com/Henrik-3/unofficial-valorant-api)!
 
 #### Important Note :D
 Please don't abuse the API, don't ruin it for the rest of us:)
