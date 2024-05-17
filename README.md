@@ -2,7 +2,7 @@
 Just another Valorant API wrapper written in TypeScript, based on Henrik-3's [unofficial-valorant-api](https://github.com/Henrik-3/unofficial-valorant-api)!
 
 #### Important Note :D
-Please don't abuse the API, don't ruin it for the rest of us:)
+You require an API key to use the wrapper, you can retrieve an API key via Henrik-3's [discord server](https://discord.gg/5M9QGkbaAy), please don't abuse the API, don't ruin it for everyone else:)
 
 ### Installation
 ``npm install valo-api``
@@ -10,7 +10,7 @@ Please don't abuse the API, don't ruin it for the rest of us:)
 ### Example Code
 ```js
 import VALOAPI from "valo-api";
-const valApi = new VALOAPI();
+const valApi = new VALOAPI("yourApiKey"); // Example API key: "zQI1-tV9GH-Tima-k8fN-pXj6-2QQVyKFjDYf"
 
 async function fetchUserDetails() {
     const getUser = await valApi.getAccount({name: "Ryumin", tag: "ELI"});

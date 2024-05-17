@@ -2,8 +2,8 @@ import axios from 'axios';
 import { APIResponse, AccountFetchByPUUIDOptions, AccountFetchOptions, _fetch, getContentFetchOptions, getCrosshairFetchOptions, getFeaturedItemsFetchOptions, getLeaderboardOptions, getLifetimeMMRHistoryFetchOptions, getMMRByPUUIDFetchOptions, getMMRFetchOptions, getMMRHistoryByPUUIDFetchOptions, getMMRHistoryFetchOptions, getMatchFetchOptions, getMatchesByPUUIDFetchOptions, getMatchesFetchOptions, getRawFetchOptions, getStatusFetchOptions, getVersionFetchOptions, getWebsiteFetchOptions } from './types';
 
 export default class mainClass {
-    token: string | undefined;
-    constructor(token?: string) {
+    token: string;
+    constructor(token: string) {
         this.token = token;
     }
     private _parsebody(body: any) {
