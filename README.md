@@ -43,3 +43,6 @@ async function fetchUserDetails() {
   url: 'https://api.henrikdev.xyz/valorant/v1/account/Ryumin/ELI'
 }
 ```
+
+### Issues
+If you encounter any issues, you can [create an issue](https://github.com/RiskyRomero/valo-api/issues) or you can message me on discord @byue
