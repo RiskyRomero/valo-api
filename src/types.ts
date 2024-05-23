@@ -231,6 +231,24 @@ export interface getMMRFetchOptions {
   filter?: Episodes;
 }
 
+export interface getPremierFetchOptions {
+  team: string;
+  tag: string;
+}
+
+export interface getPremierHistoryFetchOptions {
+  team: string;
+  tag: string;
+}
+
+export interface getPremierByTeamIdFetchOptions {
+  team_id: string;
+}
+
+export interface getPremierHistoryByTeamIdFetchOptions {
+  team_id: string;
+}
+
 export interface getRawFetchOptions {
   type: RawTypes;
   uuid: string;

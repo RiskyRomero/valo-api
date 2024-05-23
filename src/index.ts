@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { APIResponse, AccountFetchByPUUIDOptions, AccountFetchOptions, _fetch, getContentFetchOptions, getCrosshairFetchOptions, getFeaturedItemsFetchOptions, getLeaderboardOptions, getLifetimeMMRHistoryFetchOptions, getMMRByPUUIDFetchOptions, getMMRFetchOptions, getMMRHistoryByPUUIDFetchOptions, getMMRHistoryFetchOptions, getMatchFetchOptions, getMatchesByPUUIDFetchOptions, getMatchesFetchOptions, getRawFetchOptions, getStatusFetchOptions, getVersionFetchOptions, getWebsiteFetchOptions } from './types';
+import { APIResponse, AccountFetchByPUUIDOptions, AccountFetchOptions, _fetch, getContentFetchOptions, getCrosshairFetchOptions, getFeaturedItemsFetchOptions, getLeaderboardOptions, getLifetimeMMRHistoryFetchOptions, getMMRByPUUIDFetchOptions, getMMRFetchOptions, getMMRHistoryByPUUIDFetchOptions, getMMRHistoryFetchOptions, getMatchFetchOptions, getMatchesByPUUIDFetchOptions, getMatchesFetchOptions, getPremierByTeamIdFetchOptions, getPremierFetchOptions, getPremierHistoryByTeamIdFetchOptions, getRawFetchOptions, getStatusFetchOptions, getVersionFetchOptions, getWebsiteFetchOptions } from './types';
 
 export default class mainClass {
     token: string;
@@ -143,6 +143,34 @@ export default class mainClass {
         const query = this._query({ filter });
         return await this._fetch({
             url: `https://api.henrikdev.xyz/valorant/${version}/mmr/${region}/${encodeURI(name)}/${encodeURI(tag)}${query ? `?${query}` : ''}`,
+        });
+    }
+
+    async getPremier({ team, tag }: getPremierFetchOptions): Promise<APIResponse> {
+        this._validate({ team, tag });
+        return await this._fetch({
+            url: `https://api.henrikdev.xyz/valorant/v1/premier/${team}/${tag}`
+        });
+    }
+
+    async getPremierHistory({ team, tag }: getPremierFetchOptions): Promise<APIResponse> {
+        this._validate({ team, tag });
+        return await this._fetch({
+            url: `https://api.henrikdev.xyz/valorant/v1/premier/${team}/${tag}/history`
+        });
+    }
+
+    async getPremierByTeamId({ team_id }: getPremierByTeamIdFetchOptions): Promise<APIResponse> {
+        this._validate({ team_id });
+        return await this._fetch({
+            url: `https://api.henrikdev.xyz/valorant/v1/premier/${team_id}/history`
+        });
+    }
+
+    async getPremierHistoryByTeamId({ team_id }: getPremierHistoryByTeamIdFetchOptions): Promise<APIResponse> {
+        this._validate({ team_id });
+        return await this._fetch({
+            url: `https://api.henrikdev.xyz/valorant/v1/premier/${team_id}/history`
         });
     }
 
