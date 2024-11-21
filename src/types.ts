@@ -303,8 +303,8 @@ export interface IAccountDetails {
 
 export interface IMatchHistory {
   status: number;
-  data?: Match[];
-  errors: IError[];
+  data: Match[] | null;
+  errors?: IError[];
 }
 
 export interface Match {
