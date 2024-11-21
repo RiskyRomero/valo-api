@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { APIResponse, AccountFetchByPUUIDOptions, AccountFetchOptions, IAccountDetails, _fetch, getContentFetchOptions, getCrosshairFetchOptions, getFeaturedItemsFetchOptions, getLeaderboardOptions, getLifetimeMMRHistoryFetchOptions, getMMRByPUUIDFetchOptions, getMMRFetchOptions, getMMRHistoryByPUUIDFetchOptions, getMMRHistoryFetchOptions, getMatchFetchOptions, getMatchesByPUUIDFetchOptions, getMatchesFetchOptions, getPremierByTeamIdFetchOptions, getPremierFetchOptions, getPremierHistoryByTeamIdFetchOptions, getRawFetchOptions, getStatusFetchOptions, getVersionFetchOptions, getWebsiteFetchOptions } from './types';
+import { APIResponse, AccountFetchByPUUIDOptions, AccountFetchOptions, IAccountDetails, IMatchHistory, _fetch, getContentFetchOptions, getCrosshairFetchOptions, getFeaturedItemsFetchOptions, getLeaderboardOptions, getLifetimeMMRHistoryFetchOptions, getMMRByPUUIDFetchOptions, getMMRFetchOptions, getMMRHistoryByPUUIDFetchOptions, getMMRHistoryFetchOptions, getMatchFetchOptions, getMatchesByPUUIDFetchOptions, getMatchesFetchOptions, getPremierByTeamIdFetchOptions, getPremierFetchOptions, getPremierHistoryByTeamIdFetchOptions, getRawFetchOptions, getStatusFetchOptions, getVersionFetchOptions, getWebsiteFetchOptions } from './types';
 
 export default class mainClass {
   token: string;
@@ -108,12 +108,12 @@ export default class mainClass {
     });
   }
 
-  async getMatches({ region, name, tag, filter, map, size }: getMatchesFetchOptions): Promise<APIResponse> {
+  async getMatches({ region, name, tag, filter, map, size }: getMatchesFetchOptions): Promise<IMatchHistory> {
     this._validate({ region, name, tag });
     const query = this._query({ filter, map, size });
     return await this._fetch({
       url: `https://api.henrikdev.xyz/valorant/v3/matches/${region}/${encodeURI(name)}/${encodeURI(tag)}${query ? `?${query}` : ''}`,
-    });
+    }) as IMatchHistory;
   }
 
   async getMatch({ match_id }: getMatchFetchOptions): Promise<APIResponse> {
