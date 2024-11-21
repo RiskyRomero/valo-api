@@ -24,5 +24,13 @@ function runTests() {
     })
   });
 
+  describe("Get history", async () => {
+    it("Get match history", async () => {
+      const result = await valApi.getMatches({ region: "ap", name: "Ryusdfsmin", tag: "ELI", filter: "premier", map: "kasbah" });
+      if (!result.data) return console.log("none");
+      console.log(result);
+    });
+  })
+
   // More tests to be added, womp womp
 }
